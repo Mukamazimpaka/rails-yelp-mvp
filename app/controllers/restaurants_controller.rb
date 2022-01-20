@@ -13,7 +13,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant = Restaurant.new(name: "la Tour d'argent" ,address: "15 quai de la tournelle, 75005 paris" , category: "chinese restaurant")
     @restaurant.save
     redirect_to restaurant_path(@restaurant)
   end
